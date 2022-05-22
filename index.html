@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+       <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="softti cópia.png" alt="">
+    </header>
+    
+                
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal"
+                    data-target="#modalRegistro" id="nvcadastro">
+                    Novo Cadastro
+                </button>
+                <h3>Lista de Cadastro
+                </h3>
+            </div>
+        </div>
+        <table id="tbldados" class="table table-hover" style="margin-top: 16px;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Bairro</th>
+                    <th scope="col">Cidade</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col" style="width: 50px;"></th>
+                    <th scope="col" style="width: 50px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+               
+
+            </tbody>
+        </table>
+
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalRegistro" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="modalRegistroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistroLabel">Cadastros</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="hdID">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Tipo</label>
+                                <select class="form-control" id="txttipo">
+                                  <option value="PF">Pessoa Física</option>
+                                  <option value="PJ">Pessoa Jurídica</option>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> CPF/CNPJ  </label>
+                                <input id="txtcpf" type="text" class="form-control" placeholder="Digite seu CPF  ou CNPJ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Nome / Razão Social </label>
+                                <input id="txtnome" type="text" class="form-control" placeholder="Nome ou Razão Social">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Nome Fantasia </label>
+                                <input id="txtfantasia" type="text" class="form-control" placeholder="Somente para pessoa jurídica">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> CEP <button type="button" class="btn btn-primary btn-sm" id="btnbuscar">Buscar CEP</button> </label>
+                                <input id="txtcep" type="text" class="form-control" placeholder="Ex: 85852000 ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Endereço </label>
+                                <input id="txtendereço" type="text" class="form-control"
+                                    placeholder="Digite o nome da rua">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Bairro </label>
+                                <input id="txtbairro" type="text" class="form-control" placeholder="Digite o seu bairro ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Cidade </label>
+                                <input id="txtcidade" type="text" class="form-control" placeholder="Digite a sua cidade ">
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> E-mail </label>
+                                <input id="txtemail" type="email" placeholder="Ex: joão@email.com" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=""> Telefone </label>
+                                <input id="txttelefone" type="tel" class="form-control" placeholder="Ex: (45) 3030-1067">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary" id="btnsalvar" >Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integridade ="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin ="anonymous"></script> <!-- Jquery do index.js e cep.js-->
+
+        <script src="cep.js"></script>
+        <script src="index.js"></script>
+        <script src="CNPJ.js"></script>
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+           
+</body>
+
+</html>
+

@@ -1,0 +1,17 @@
+header{
+    text-align: center;
+    background: url(backgroundheader.png) no-repeat center center ;
+    height: 200px; 
+}
+img{
+    max-width: 250px;
+}
+#nvcadastro{
+    margin:  0px 16px;
+    
+    border: none;
+}
+h3{
+    
+    margin: 0px 16px;
+}
